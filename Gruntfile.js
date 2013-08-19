@@ -23,13 +23,23 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		copy: {
+			main: {
+				files: [
+					{expand: true, cwd: 'src/', src: ['*.html'], dest: 'public/', filter: 'isFile'},
+					{expand: true, cwd: 'src/ico', src: ['*'], dest: 'public/ico/', filter: 'isFile'},
+					{expand: true, cwd: 'src/js', src: ['*.js'], dest: 'public/js/', filter: 'isFile'},
+				]
+			}
+		},
 	});
 
 	// Load the plugins
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Default task(s).
-	grunt.registerTask('default', ['less', 'imagemin']);
+	grunt.registerTask('default', ['copy', 'less', 'imagemin']);
 
 };
