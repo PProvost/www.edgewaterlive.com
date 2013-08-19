@@ -1,0 +1,54 @@
+// Custom less rules - always loads last
+
+@import "bootstrap/bootstrap.less";
+
+body {
+//	padding-top: 50px;
+}
+
+.container {
+  @shadow: 0px 0px 6px 2px rgba(0,0,0,1);
+  .box-shadow(@shadow);
+
+	padding: 0px;
+
+	color: #f0f0f0;
+	background-color: rgba(0,0,0,1);
+}
+
+footer {
+	background-color: #333;
+	color: #ccc;
+	.text-center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.content-panel {
+	margin-top: 2em;
+	padding: 1em;
+}
+
+.panel {
+	color: #333;
+}
+
+.stretch {
+	height: 100%;
+	width: 100%;
+}
+
+#setlist {
+	margin-top: 1.5em;
+}
+
+@media screen and (min-width: @screen-tablet) {
+	.carousel-caption {
+    left: 10%;
+    right: 10%;
+    padding-bottom: 10px;
+  }
+ .carousel-indicators {
+    bottom: 1px;
+  }
+}
