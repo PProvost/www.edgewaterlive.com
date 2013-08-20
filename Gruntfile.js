@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 	// Project config
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		clean: ['public/'],
 		less: {
 			dist: {
 				options: {
@@ -35,11 +36,12 @@ module.exports = function(grunt) {
 	});
 
 	// Load the plugins
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Default task(s).
-	grunt.registerTask('default', ['copy', 'less', 'imagemin']);
+	grunt.registerTask('default', ['clean', 'copy', 'less', 'imagemin']);
 
 };
