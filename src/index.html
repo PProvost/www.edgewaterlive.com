@@ -13,6 +13,16 @@
 	</head>
 
 	<body>
+		<!-- Facebook SDK -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
 		<div class="container">
 			<header>
 				<h1 class="sr-only">Edgewater Live</h1>
@@ -36,7 +46,14 @@
 
 					<p><strong>Book us for your next party or show!</strong></p>
 
-					<p>Contact James Elias at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
+					<div class="row">
+						<div class="col-md-9">
+							<p>Contact James Elias at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
+						</div>
+						<div class="col-md-3">
+							<div class="fb-like" data-href="https://www.facebook.com/EdgewaterLive" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+						</div>
+					</div>
 				</section>
 
 				<section class="col-md-4">
@@ -151,15 +168,24 @@
 
 			<footer class="clearfix pull-left col-md-12">
 
-				<p>Edgewater Live is: James Elias (vocal), DeWayne Even (guitar), John Gonzalez (guitar),
-				Peter Provost (bass), Jason Erwood (drums).</p>
-
-				<p>For questions, comments, feedback, or to arrange an event, contact
-				James Elias at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
-
-				<p>All site content &copy;2013 by Edgewater Live. All songs are
-				copyright their respective owners, and are used here for illustrative
-				purposes only.<p>
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-2 text-right">Edgewater Live is:</div>
+					<div class="col-sm-4 text-left"><p>James Elias (vocal)<br>
+						DeWayne Even (guitar)<br>
+						John Gonzalez (guitar)<br>
+						Peter Provost (bass)<br>
+						Jason Erwood (drums)</p>
+					</div>
+					<div class="col-sm-6 col-sm-offset-3">
+						<p class="text-center padding-top">For questions, comments, feedback, or to arrange an event,
+						contact James Elias at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
+					</div>
+					<div class="col-sm-6 col-sm-offset-3">
+						<p class="text-center">All site content &copy;2013 by Edgewater Live.
+						All songs are copyright their respective owners, and are used here for illustrative
+						purposes only.<p>
+					</div>
+				</div>
 
 			</footer>
 
