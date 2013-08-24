@@ -27,6 +27,7 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
+					{expand: true, cwd: 'src', src:['BingSiteAuth.xml'], dest: 'public/' },
 					{expand: true, cwd: 'src/ico', src: ['*'], dest: 'public/ico/', filter: 'isFile'},
 					{expand: true, cwd: 'src/js', src: ['*.js'], dest: 'public/js/', filter: 'isFile'},
 				]
