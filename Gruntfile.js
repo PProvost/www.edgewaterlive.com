@@ -16,12 +16,20 @@ module.exports = function(grunt) {
 		},
 		imagemin: {
 			dynamic: {
-				files: [{
-					expand: true,
-					cwd: 'src/',
-					src: ['img/**/*.{png,jpg,gif}'],
-					dest: 'public/'
-				}]
+				files: [
+					{
+						expand: true,
+						cwd: 'src/',
+						src: ['img/**/*.{png,jpg,gif}'],
+						dest: 'public/'
+					},
+					{
+						expand: true,
+						cwd: 'src/new',
+						src: ['img/**/*.{png,jpg,gif}'],
+						dest: 'public/new'
+					}
+				]
 			}
 		},
 		copy: {
@@ -30,6 +38,12 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'src', src:['BingSiteAuth.xml'], dest: 'public/' },
 					{expand: true, cwd: 'src/ico', src: ['*'], dest: 'public/ico/', filter: 'isFile'},
 					{expand: true, cwd: 'src/js', src: ['*.js'], dest: 'public/js/', filter: 'isFile'},
+					{expand: true, cwd: 'src/new/css', src: ['*.css'], dest: 'public/new/css/', filter: 'isFile'},
+					{expand: true, cwd: 'src/new/js', src: ['*.js'], dest: 'public/new/js/', filter: 'isFile'},
+					{src: 'src/new/bower_components/modernizr/modernizr.js', dest: 'public/new/bower_components/modernizr/modernizr.js'},
+					{expand: true, cwd: 'src/new/bower_components/jquery/dist', src: ['jquery.min.*'], dest: 'public/new/bower_components/jquery/dist/'},
+					{src: 'src/new/bower_components/foundation/js/foundation.min.js', dest: 'public/new/bower_components/foundation/js/foundation.min.js'}
+
 				]
 			}
 		},
@@ -40,6 +54,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'public/index.html': 'src/index.html',
+					'public/new/index.html': 'src/new/index.html',
 					'public/404.html': 'src/404.html',
 				},
 			},
