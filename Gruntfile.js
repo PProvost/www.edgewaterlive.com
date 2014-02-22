@@ -40,6 +40,7 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'src/js', src: ['*.js'], dest: 'public/js/', filter: 'isFile'},
 					{expand: true, cwd: 'src/new/css', src: ['*.css'], dest: 'public/new/css/', filter: 'isFile'},
 					{expand: true, cwd: 'src/new/js', src: ['*.js'], dest: 'public/new/js/', filter: 'isFile'},
+					{expand: true, cwd: 'src/new/img/webicons', src: ['*.svg'], dest: 'public/new/img/webicons/', filter: 'isFile'},
 					{src: 'src/new/bower_components/modernizr/modernizr.js', dest: 'public/new/bower_components/modernizr/modernizr.js'},
 					{expand: true, cwd: 'src/new/bower_components/jquery/dist', src: ['jquery.min.*'], dest: 'public/new/bower_components/jquery/dist/'},
 					{src: 'src/new/bower_components/foundation/js/foundation.min.js', dest: 'public/new/bower_components/foundation/js/foundation.min.js'}
