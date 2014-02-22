@@ -13,17 +13,18 @@
 			<nav class="top-bar" data-topbar>
 				<ul class="title-area">
 					<li class="name">
-						<h1><a href="#">Edgewater Live</a></h1>
+						<h1><a href="javascript:scrollIt($('html, body'))">Edgewater Live</a></h1>
 					</li>
 					<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
 				</ul>
 
 				<section class="top-bar-section">
 					<ul class="right">
-						<li><a href="#sounds">Sounds</a></li>
-						<li><a href="#songs">Songs</a></li>
-						<li><a href="#shows">Shows</a></li>
-						<li><a href="#about">About</a></li>
+						<li><a href="javascript:scrollIt($('#about'))">About</a></li>
+						<li><a href="javascript:scrollIt($('#sounds'))">Sounds</a></li>
+						<li><a href="javascript:scrollIt($('#songs'))">Songs</a></li>
+						<li><a href="javascript:scrollIt($('#shows'))">Shows</a></li>
+						<li><a href="javascript:scrollIt($('#members'))">Members</a></li>
 					</ul>
 				</section>
 			</nav>
@@ -37,7 +38,7 @@
 
 		<!-- First Band (Orbit Slider) -->
 		<div class="row">
-			<div class="medium-12 columns">
+			<div class="large-12 columns">
 				<ul class="featured" data-orbit data-options="timer_speed:3000;
 					slide_number:false;
 					animation_speed:500;
@@ -82,9 +83,9 @@
 		</div>
 
 		<!-- Call to Action Panel -->
+		<a id="about"></a>
 		<div class="row">
-			<div class="medium-12 columns">
-
+			<div class="large-12 columns">
 				<div class="panel">
 					<div class="row">
 						<div class="medium-9 columns">
@@ -104,7 +105,7 @@
 
 						</div>
 						<div class="medium-3 columns">
-							<a href="#" class="radius button right">Contact Us</a>
+							<a href="mailto:edgewaterliveband@gmail.com" class="radius button right">Contact Us</a>
 						</div>
 					</div>
 				</div>
@@ -114,38 +115,31 @@
 
 		<!-- Three-up Content Blocks -->
 
-		<a id="sounds"></a>
 		<div class="row">
+
+			<a id="sounds"></a>
 			<div class="medium-6 columns">
-				<img src="img/Sounds-Tile.jpg" />
+				<img src="img/Sounds-Tile.jpg" width="100%" />
 				<h4>Sounds</h4>
 				<p>Give us a listen!</p>
 				<hr/>
-
 				<!-- Live Sample Reel #1 -->
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F80873054&amp;color=007cff&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
 				<!-- Live Sample Reel #2 -->
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F80874169&amp;color=007cff&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
 				<!-- Santeria -->
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F78888299&amp;color=007cff&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
 				<!-- Interstate Love Song -->
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F78944577&amp;color=007cff&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
 				<!-- Toes -->
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F78888022&amp;color=007cff&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
-
+				&nbsp;
 			</div>
 
 			<a id="songs"></a>
 			<div class="medium-6 columns">
-				<img src="img/Songs-Tile.jpg" />
+				<img src="img/Songs-Tile.jpg" width="100%" />
 				<h4>Songs</h4>
-				<p>We're constantly picking up new songs, so if you don't see something... ask!</p>
-				<hr/>
 
 				<dl class="tabs" data-tab>
 					<dd class="active"><a href="#genre-tab">By Genre</a></dd>
@@ -155,11 +149,6 @@
 				<div class="tabs-content">
 
 					<div class="content" id="year-tab">
-						<!--
-
-
-						-->
-
 						<h5>1960s</h5>
 						<ul>
 							<li>Drive My Car - The Beatles</li> <!-- 1965 -->
@@ -169,56 +158,56 @@
 
 						<h5>1970s</h5>
 						<ul>
-							<li>Beer Drinkers and Hell Raisers - ZZ Top</li> <!-- 1973 -->
-							<li>Roadhouse Blues - The Doors</li> <!-- 1970 -->
-							<li>Message In A Bottle  - The Police</li> <!-- 1979 -->
-							<li>We Just Disagree - Dave Mason</li> <!-- 1977 -->
+							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li> <!-- 1977 -->
 							<li>Baby, I Love Your Way - Peter Frampton</li> <!-- 1975 -->
+							<li>Beer Drinkers and Hell Raisers - ZZ Top</li> <!-- 1973 -->
 							<li>Drift Away - Dobie Gray / Uncle Kracker</li> <!-- 1973 -->
+							<li>Franklin’s Tower - The Grateful Dead</li> <!-- 1975 -->
 							<li>Hotel California - Eagles</li> <!-- 1977 -->
-							<li>Sultans of Swing - Dire Straits</li> <!-- 1978 -->
 							<li>Just What I Needed - The Cars</li> <!-- 1978 -->
+							<li>Margaritaville - Jimmy Buffett</li> <!-- 1977 -->
+							<li>Message In A Bottle  - The Police</li> <!-- 1979 -->
+							<li>Roadhouse Blues - The Doors</li> <!-- 1970 -->
+							<li>Sultans of Swing - Dire Straits</li> <!-- 1978 -->
 							<li>Sweet Emotion - Aerosmith</li> <!-- 1975 -->
 							<li>Take the Money and Run - Steve Miller Band</li> <!-- 1976 -->
-							<li>Franklin’s Tower - The Grateful Dead</li> <!-- 1975 -->
-							<li>Margaritaville - Jimmy Buffett</li> <!-- 1977 -->
+							<li>We Just Disagree - Dave Mason</li> <!-- 1977 -->
 							<li>Whiskey River - Willie Nelson</li> <!-- 1978 -->
-							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li> <!-- 1977 -->
 						</ul>
 
 						<h5>1980s</h5>
 						<ul>
-							<li>Overkill - Men At Work</li> <!-- 1983 -->
-							<li>One Thing Leads to Another - The Fixx</li> <!-- 1983 -->
-							<li>Under the Milky Way - The Church</li> <!-- 1988 -->
-							<li>Keep Your Hands to Yourself - Georgia Satellites</li> <!-- 1986 -->
-							<li>Small Town - John Mellencamp</li> <!-- 1985 -->
-							<li>Refugee - Tom Petty and the Heartbreakers</li> <!-- 1980 -->
-							<li>Train in Vain - The Clash</li> <!-- 1980 -->
 							<li>Guitars and Cadillacs - Dwight Yoakum</li> <!-- 1986 -->
+							<li>Keep Your Hands to Yourself - Georgia Satellites</li> <!-- 1986 -->
+							<li>One Thing Leads to Another - The Fixx</li> <!-- 1983 -->
+							<li>Overkill - Men At Work</li> <!-- 1983 -->
+							<li>Refugee - Tom Petty and the Heartbreakers</li> <!-- 1980 -->
+							<li>Small Town - John Mellencamp</li> <!-- 1985 -->
+							<li>Train in Vain - The Clash</li> <!-- 1980 -->
+							<li>Under the Milky Way - The Church</li> <!-- 1988 -->
 						</ul>
 
 						<h5>1990s</h5>
 						<ul>
+							<li>Always on the Run - Lenny Kravitz</li> <!-- 1991 -->
+							<li>Barely Breathing - Duncan Sheik</li> <!-- 1996 -->
+							<li>Closing Time - Semisonic</li> <!-- 1998 -->
+							<li>Cold Sweat - The Boneshakers</li> <!-- 1997 -->
+							<li>Cumbersome - Seven Mary Three</li> <!-- 1996 -->
+							<li>Friends In Low Places - Garth Brooks</li> <!-- 1990 -->
 							<li>If You Could Only See - Tonic</li> <!-- 1997 -->
 							<li>Interstate Love Song - Stone Temple Pilots</li> <!-- 1994 -->
 							<li>Long Way Down - Goo Goo Dolls</li> <!-- 1995 -->
-							<li>Always on the Run - Lenny Kravitz</li> <!-- 1991 -->
-							<li>Cumbersome - Seven Mary Three</li> <!-- 1996 -->
-							<li>Closing Time - Semisonic</li> <!-- 1998 -->
-							<li>Friends In Low Places - Garth Brooks</li> <!-- 1990 -->
 							<li>Santeria - Sublime</li> <!-- 1997 -->
-							<li>Barely Breathing - Duncan Sheik</li> <!-- 1996 -->
-							<li>Cold Sweat - The Boneshakers</li> <!-- 1997 -->
 						</ul>
 
 						<h5>2000s</h5>
 						<ul>
 							<li>Amber - 311</li> <!-- 2002 -->
-							<li>Times Like These - Foo Fighters</li> <!-- 2003 -->
-							<li>Use Somebody - Kings of Leon</li> <!-- 2008 -->
 							<li>Out Last Night - Kenny Chesney</li> <!-- 2009 -->
+							<li>Times Like These - Foo Fighters</li> <!-- 2003 -->
 							<li>Toes - Zac Brown Band</li> <!-- 2009 -->
+							<li>Use Somebody - Kings of Leon</li> <!-- 2008 -->
 						</ul>
 
 						<h5>2010s</h5>
@@ -231,22 +220,23 @@
 					<div class="content active" id="genre-tab">
 						<h5>Alternative Rock</h5>
 						<ul>
-							<li>Overkill - Men At Work</li>
+							<li>Always on the Run - Lenny Kravitz</li>
+							<li>Barely Breathing - Duncan Sheik</li>
+							<li>Closing Time - Semisonic</li>
+							<li>Cumbersome - Seven Mary Three</li>
 							<li>If You Could Only See - Tonic</li>
 							<li>Interstate Love Song - Stone Temple Pilots</li>
-							<li>Times Like These - Foo Fighters</li>
-							<li>Cumbersome - Seven Mary Three</li>
-							<li>Always on the Run - Lenny Kravitz</li>
-							<li>Use Somebody - Kings of Leon</li>
 							<li>Long Way Down - Goo Goo Dolls</li>
-							<li>Closing Time - Semisonic</li>
 							<li>One Thing Leads to Another - The Fixx</li>
+							<li>Overkill - Men At Work</li>
+							<li>Times Like These - Foo Fighters</li>
 							<li>Under the Milky Way - The Church</li>
-							<li>Barely Breathing - Duncan Sheik</li>
+							<li>Use Somebody - Kings of Leon</li>
 						</ul>
 
 						<h5>Blues / Blues Rock</h5>
 						<ul>
+							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li>
 							<li>Beer Drinkers and Hell Raisers - ZZ Top</li>
 							<li>Cold Sweat - The Boneshakers</li>
 							<li>Keep Your Hands to Yourself - Georgia Satellites</li>
@@ -254,43 +244,38 @@
 
 						<h5>Classic Rock</h5>
 						<ul>
-							<li>Drive My Car - The Beatles</li>
-							<li>Paint It, Black - The Rolling Stones</li>
-							<li>Roadhouse Blues - The Doors</li>
-							<li>Message In A Bottle  - The Police</li>
-							<li>We Just Disagree - Dave Mason</li>
 							<li>Baby, I Love Your Way - Peter Frampton</li>
 							<li>Drift Away - Dobie Gray / Uncle Kracker</li>
-							<li>Hotel California - Eagles</li>
-							<li>Sultans of Swing - Dire Straits</li>
-							<li>Ramble On - Led Zeppelin</li>
-							<li>Just What I Needed - The Cars</li>
-							<li>Small Town - John Mellencamp</li>
-							<li>Take the Money and Run - Steve Miller Band</li>
+							<li>Drive My Car - The Beatles</li>
 							<li>Franklin’s Tower - The Grateful Dead</li>
+							<li>Hotel California - Eagles</li>
+							<li>Just What I Needed - The Cars</li>
+							<li>Message In A Bottle  - The Police</li>
+							<li>Paint It, Black - The Rolling Stones</li>
+							<li>Ramble On - Led Zeppelin</li>
 							<li>Refugee - Tom Petty and the Heartbreakers</li>
+							<li>Roadhouse Blues - The Doors</li>
+							<li>Small Town - John Mellencamp</li>
+							<li>Sultans of Swing - Dire Straits</li>
 							<li>Sweet Emotion - Aerosmith</li>
+							<li>Take the Money and Run - Steve Miller Band</li>
 							<li>Train in Vain - The Clash</li>
+							<li>We Just Disagree - Dave Mason</li>
 						</ul>
 
 						<h5>Country / Country Rock</h5>
 						<ul>
-							<li>Margaritaville - Jimmy Buffett</li>
-							<li>Toes - Zac Brown Band</li>
 							<li>Friends In Low Places - Garth Brooks</li>
-							<li>Whiskey River - Willie Nelson</li>
-							<li>My Kinda Party - Jason Aldean</li>
 							<li>Guitars and Cadillacs - Dwight Yoakum</li>
-							<li>Red Solo Cup - Toby Keith</li>
+							<li>Margaritaville - Jimmy Buffett</li>
+							<li>My Kinda Party - Jason Aldean</li>
 							<li>Out Last Night - Kenny Chesney</li>
+							<li>Red Solo Cup - Toby Keith</li>
+							<li>Toes - Zac Brown Band</li>
+							<li>Whiskey River - Willie Nelson</li>
 						</ul>
 
-						<h5>Funk / R&amp;B</h5>
-						<ul>
-							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li>
-						</ul>
-
-						<h5>Reggae/Ska</h5>
+						<h5>Reggae / Ska</h5>
 						<ul>
 							<li>Amber - 311</li>
 							<li>Santeria - Sublime</li>
@@ -302,26 +287,38 @@
 
 		</div>
 
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="panel">
+					<div class="row">
+						<a id="shows"></a>
+
+						<div class="small-3 columns">
+							<img src="img/Shows-Tile.jpg" />
+						</div>
+						<div class="small-9 columns">
+							<h4>Upcoming Shows</h4>
+
+							<h5>Loyal Brothers Lounge</h5>
+							<h6 class="subheader">Friday, Feb 28 2014</h6>
+							<p>Join us up in Glenwood Springs for a fun, rockin' party with the loyal brothers!</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<div class="row">
-			<hr/>
 
-			<a id="shows"></a>
-			<div class="medium-6 columns">
-				<img src="img/Shows-Tile.jpg" />
-				<h4>Shows</h4>
-				<p>Confirmed upcoming gigs.</p>
-				<hr/>
-				<h5>Loyal Brothers Lounge</h5>
-				<h6 class="subheader">Friday, Feb 28 2014</h6>
-				<p>Join us up in Glenwood Springs for a fun, rockin' party with the loyal brothers!</p>
+			<a id="members"></a>
+			<div class="medium-12 columns">
+				<h4>Band Members</h4>
 			</div>
 
-			<a id="about"></a>
-			<div class="medium-6 columns">
-				<img src="img/About-Tile.jpg" />
-				<h4>About</h4>
-
+			<div class="medium-4 columns">
+				<img src='img/mugshots/Jamo.jpg' width="100%" />
 				<h5>James Elias</h5>
 				<h6 class="subheader">Lead vocals</h6>
 				<p>James started leading bands in the mid 1980s in the emerging punk
@@ -334,7 +331,10 @@
 					of Soul. Taking a break from touring bands, James fronted local bands
 					The Pop Tarts and Band Gone Wild before starting up Edgewater
 					Live.</p>
+			</div>
 
+			<div class="medium-4 columns">
+				<img src='img/mugshots/John.jpg' width="100%" />
 				<h5>John Gonzales</h5>
 				<h6 class="subheader">Lead guitar</h6>
 				<p>John has been playing in Denver for the last 20 years in multiple
@@ -343,7 +343,10 @@
 					opportunity to play a variety of cover songs with the rest of
 					Edgewater Live provided him with the challenge of learning more about
 					music and having fun playing live.</p>
+			</div>
 
+			<div class="medium-4 columns">
+				<img src='img/mugshots/Dewayne.jpg' width="100%" />
 				<h5>DeWayne Even</h5>
 				<h6 class="subheader">Rhythm guitar</h6>
 				<p>A music educator, DeWayne played the trumpet through college and
@@ -351,7 +354,14 @@
 					world-class ensembles. He played trumpet in Savvy Backbone and The
 					Redemptions before taking on the electric guitar. DeWayne loves music
 					of all kinds, especially live music.</p> 
+			</div>
 
+		</div>
+
+		<div class="row">
+
+			<div class="medium-4 medium-offset-2 columns">
+				<img src='img/mugshots/Peter.jpg' width="100%" />
 				<h5>Peter Provost</h5>
 				<h6 class="subheader">Bass</h6>
 				<p>Computer engineer, hacker, gamer, musician and family man are all
@@ -361,35 +371,36 @@
 					Harrison before taking a break from the music scene. Returning as the
 					bass player for Edgewater live, his musical tastes cover everything
 					from metal to reggae to hippie folk and classic rock.</p>
+			</div>
 
+			<div class="medium-4 columns end">
+				<img src='img/mugshots/Brad.jpg' width="100%" />
 				<h5>Brad Taylor</h5>
 				<h6 class="subheader">Drums</h6>
 				<p>Brad likes hitting things with sticks...</p>
-
 			</div>
 		</div>
 
 
 		<!-- Footer -->
 
-		<footer class="row">
-			<div class="medium-12 columns">
-				<hr />
-				<div class="row">
-					<div class="medium-6 columns">
-						<p>© Copyright no one at all. Go to town.</p>
-					</div>
-					<div class="medium-6 columns">
-						<ul class="inline-list right">
-							<li><a href="#">Link 1</a></li>
-							<li><a href="#">Link 2</a></li>
-							<li><a href="#">Link 3</a></li>
-							<li><a href="#">Link 4</a></li>
-						</ul>
-					</div>
+		<div class="footer">
+			<div class="row">
+				<div class="medium-8 medium-offset-2 columns">
+					<p>For questions, comments, feedback, or to arrange an event, contact James Elias at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
+					<p>All site content ©2013 by Edgewater Live. All songs are copyright their respective owners, and are used here for illustrative purposes only.</p>
+				</div> 
+			</div>
+			<div class="row">
+				<div class="medium-4 medium-centered columns">
+					<ul class="small-block-grid-3">
+						<li><a href="#" class="webicon facebook large">Like us on Facebook</a></li>
+						<li><a href="#" class="webicon twitter large">Follow us on Twitter</a></li>
+						<li><a href="#" class="webicon mail large">Send us an email</a></li>
+					</ul>
 				</div>
-			</div> 
-		</footer>
+			</div>
+		</div>
 
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/foundation/js/foundation.min.js"></script>
