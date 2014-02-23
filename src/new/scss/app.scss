@@ -9,14 +9,25 @@
 }
 
 .panel-title {
-	@include radius;
-	background: $primary-color; // #333;
+	background: $primary-color;
 	margin: -1.5rem -1.35rem 1.25rem -1.25rem !important;
 	padding: 0;
 	h4 {
 		color: white;
 		padding: 1rem 1rem 1rem 0.5rem;
 	}
+}
+
+.panel-footer {
+	background: darken($panel-bg, 10%);
+	margin: 1.5rem -1.25rem -2.5rem -1.25rem !important;
+	padding: 8px 0px 2px 0px !important;
+	line-height: normal;
+}
+
+.panel-footer-text {
+	vertical-align: middle;
+	p { margin: 0px !important; }
 }
 
 // Or selectively include components
