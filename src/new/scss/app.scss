@@ -8,6 +8,17 @@
 	padding: 24px 0px 10px;
 }
 
+.panel-title {
+	@include radius;
+	background: $primary-color; // #333;
+	margin: -1.5rem -1.35rem 1.25rem -1.25rem !important;
+	padding: 0;
+	h4 {
+		color: white;
+		padding: 1rem 1rem 1rem 0.5rem;
+	}
+}
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
