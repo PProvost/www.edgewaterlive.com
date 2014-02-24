@@ -18,7 +18,7 @@ $(document).ready(function() {
 			if (href.match(/^javascript:/)) { return; }
 			if (appInsights) {
 				appInsights.logEvent('linkclick/' + id, { "url": href, });
-				alert('linkclick/' + id);
+				// alert('linkclick/' + id);
 			}
 		}
 	});
