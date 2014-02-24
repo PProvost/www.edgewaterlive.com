@@ -8,3 +8,18 @@ function scrollIt(elt) {
 }
 
 $(document).foundation();
+
+$(document).ready(function() {
+	$('a').click(function() {
+		var href = ($(this).attr('href'));
+		var id = ($(this).attr('id')) || "";
+
+		if (href && href != "") {
+			if (href.match(/^javascript:/)) { return; }
+			if (appInsights) {
+				appInsights.logEvent('linkclick/' + id, { "url": href, });
+				alert('linkclick/' + id);
+			}
+		}
+	});
+});

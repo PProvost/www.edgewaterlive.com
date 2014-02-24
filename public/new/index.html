@@ -10,6 +10,12 @@
 		<title>Edgewater Live :: Colorado Live Music</title>
 		<link rel="stylesheet" href="css/app.css">
 		<script src="bower_components/modernizr/modernizr.js"></script>
+
+		<script type="text/javascript">
+			var appInsights = { queue: [], start: function (n) { function r(n, t) { n[t] = function () { var i = arguments; n.queue.push(function () { n[t].apply(n, i) }) } } var t, i; this.applicationInsightsId = n; this.accountId = null; this.appUserId = null; r(this, "logEvent"); r(this, "logPageView"); t = document.createElement("script"); t.type = "text/javascript"; t.src = "//az416426.vo.msecnd.net/scripts/ai.js"; t.async = !0; i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(t, i) } };
+			appInsights.start("b936b421-35a7-4504-84ed-d1117aac50b1");
+			appInsights.logPageView();
+		</script>
 	</head>
 	<body>
 
@@ -17,18 +23,18 @@
 			<nav class="top-bar" data-topbar="">
 				<ul class="title-area">
 					<li class="name">
-						<h1><a href="javascript:scrollIt($('html, body'))">Edgewater Live</a></h1>
+						<h1><a href="javascript:scrollIt($('html, body'))" id="link-topbar-home">Edgewater Live</a></h1>
 					</li>
 					<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
 				</ul>
 
 				<section class="top-bar-section">
 					<ul class="right">
-						<li><a href="javascript:scrollIt($('#about'))">About</a></li>
-						<li><a href="javascript:scrollIt($('#sounds'))">Sounds</a></li>
-						<li><a href="javascript:scrollIt($('#songs'))">Songs</a></li>
-						<li><a href="javascript:scrollIt($('#shows'))">Shows</a></li>
-						<li><a href="javascript:scrollIt($('#members'))">Members</a></li>
+						<li><a href="javascript:scrollIt($('#about'))" id="link-topbar-about">About</a></li>
+						<li><a href="javascript:scrollIt($('#sounds'))" id="link-topbar-sounds">Sounds</a></li>
+						<li><a href="javascript:scrollIt($('#songs'))" id="link-topbar-songs">Songs</a></li>
+						<li><a href="javascript:scrollIt($('#shows'))" id="link-topbar-shows">Shows</a></li>
+						<li><a href="javascript:scrollIt($('#members'))" id="link-topbar-members">Members</a></li>
 					</ul>
 				</section>
 			</nav>
@@ -109,9 +115,9 @@
 
 						</div>
 						<div class="large-1 columns vertical-middle text-center">
-							<a href="mailto:edgewaterliveband@gmail.com" class="webicon mail large has-tip tip-left radius" data-tooltip="" title="Send us an email">Send us an email</a>
-							<a href="https://www.facebook.com/EdgewaterLive" class="webicon facebook large has-tip tip-left radius" data-tooltip="" title="Like us on Facebook">Like us on Facebook</a>
-							<a href="https://twitter.com/EdgewaterLive" class="webicon twitter large has-tip tip-left radius" data-tooltip="" title="Follow us on Twitter">Follow us on Twitter</a>
+							<a href="mailto:edgewaterliveband@gmail.com" class="webicon mail large has-tip tip-left radius" data-tooltip="" title="Send us an email" id="link-about-email">Send us an email</a>
+							<a href="https://www.facebook.com/EdgewaterLive" class="webicon facebook large has-tip tip-left radius" data-tooltip="" title="Like us on Facebook" id="link-about-facebook">Like us on Facebook</a>
+							<a href="https://twitter.com/EdgewaterLive" class="webicon twitter large has-tip tip-left radius" data-tooltip="" title="Follow us on Twitter" id="link-about-twitter">Follow us on Twitter</a>
 						</div>
 					</div>
 				</div>
@@ -148,8 +154,8 @@
 				<h4>Songs</h4>
 
 				<dl class="tabs" data-tab="">
-					<dd class="active"><a href="#genre-tab">By Genre</a></dd>
-					<dd><a href="#year-tab">By Decade</a></dd>
+					<dd class="active"><a href="#genre-tab" id="link-songstab-bygenre">By Genre</a></dd>
+					<dd><a href="#year-tab" id="link-songstab-bydecade">By Decade</a></dd>
 				</dl>
 
 				<div class="tabs-content">
@@ -308,7 +314,7 @@
 						</div>
 						<div class="small-9 columns">
 							<h4>
-								<a href="https://www.facebook.com/LoyalBrothersLounge">Loyal Brothers Lounge</a><br>
+								<a href="https://www.facebook.com/LoyalBrothersLounge" id="link-shows-1">Loyal Brothers Lounge</a><br>
 								<small>Friday, Feb 28 2014</small>
 							</h4>
 							<p>Join us up in Glenwood Springs for a fun, rockin' party with the loyal brothers!</p>
@@ -319,10 +325,10 @@
 						<div class="small-12 columns text-center">
 							<div class="row">
 								<div class="small-3 columns text-right">
-									<a href="https://www.facebook.com/EdgewaterLive/events" class="webicon facebook">Facebook Events Page</a>
+									<a href="https://www.facebook.com/EdgewaterLive/events" class="webicon facebook" id="link-shows-facebook-icon">Facebook Events Page</a>
 								</div>
 								<div class="small-9 columns text-left panel-footer-text">
-									<p>Visit our <a href="https://www.facebook.com/EdgewaterLive/events">Facebook Events page</a> to check for newly scheduled gigs!</p>
+									<p>Visit our <a href="https://www.facebook.com/EdgewaterLive/events" id="link-shows-facebook-text">Facebook Events page</a> to check for newly scheduled gigs!</p>
 								</div>
 							</div>
 						</div>
@@ -426,16 +432,16 @@
 				<div class="medium-8 columns">
 					<div class="row">
 						<div class="medium-8 medium-centered columns">
-							<p>For questions, comments, feedback, or to arrange an event, contact us at <a href="mailto:edgewaterliveband@gmail.com">edgewaterliveband@gmail.com</a>.</p>
+							<p>For questions, comments, feedback, or to arrange an event, contact us at <a href="mailto:edgewaterliveband@gmail.com" id="link-footer-email-text">edgewaterliveband@gmail.com</a>.</p>
 							<p>All songs are copyright their respective owners, and are used here for illustrative purposes only. All other rights reserved.</p>
 						</div> 
 					</div>
 					<div class="row">
 						<div class="medium-4 medium-centered columns">
 							<ul class="small-block-grid-3">
-								<li><a href="https://www.facebook.com/EdgewaterLive" class="webicon facebook large" title="Like us on Facebook">Like us on Facebook</a></li>
-								<li><a href="https://twitter.com/EdgewaterLive" class="webicon twitter large" title="Follow us on Twitter">Follow us on Twitter</a></li>
-								<li><a href="mailto:edgewaterliveband@gmail.com" class="webicon mail large" title="Send us an email">Send us an email</a></li>
+								<li><a href="https://www.facebook.com/EdgewaterLive" id="link-footer-facebook-icon" class="webicon facebook large" title="Like us on Facebook">Like us on Facebook</a></li>
+								<li><a href="https://twitter.com/EdgewaterLive" id="link-footer-twitter-icon" class="webicon twitter large" title="Follow us on Twitter">Follow us on Twitter</a></li>
+								<li><a href="mailto:edgewaterliveband@gmail.com" id="link-footer-email-icon" class="webicon mail large" title="Send us an email">Send us an email</a></li>
 							</ul>
 						</div>
 					</div>
