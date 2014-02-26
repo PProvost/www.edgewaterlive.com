@@ -32,6 +32,7 @@ module.exports = function(grunt) {
 				files: [
 					{expand: true, cwd: 'src', src: ['*.txt'], dest: 'public/', filter: 'isFile'},
 					{expand: true, cwd: 'src/img/webicons', src: ['*.svg'], dest: 'public/img/webicons/', filter: 'isFile'},
+					{src: 'src/img/favicon.ico', dest: 'public/img/favicon.ico' },
 					{src: 'src/BingSiteAuth.xml', dest: 'public/BingSiteAuth.xml' },
 					{src: 'bower_components/foundation/js/foundation.min.js', dest: 'public/js/foundation.min.js'}
 				]
