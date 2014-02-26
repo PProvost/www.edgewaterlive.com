@@ -1,0 +1,1 @@
+function scrollIt(a){var b=$(a).offset();b.top-=60,$("html, body").animate({scrollTop:b.top,scrollLeft:b.left})}$(document).foundation(),$(document).ready(function(){$("a").click(function(){var a=$(this).attr("href"),b=$(this).attr("id")||"";if(a&&""!=a){if(a.match(/^javascript:/))return;appInsights&&appInsights.logEvent("linkclick/"+b,{url:a})}})});

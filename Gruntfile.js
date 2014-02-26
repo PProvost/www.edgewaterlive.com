@@ -1,19 +1,20 @@
 module.exports = function(grunt) {
-
-	// Project config
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		clean: ['public/'],
-		less: {
-			dist: {
-				options: {
-					yuicompress: true
-				},
-				files: {
-					"public/css/main.css": "src/less/main.less"
-				},
-			},
-		},
+		sass: {
+      options: {
+        includePaths: ['bower_components/foundation/scss']
+      },
+      dist: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files: {
+          'public/css/app.css': 'src/scss/app.scss'
+        }        
+      }
+    },
 		imagemin: {
 			dynamic: {
 				files: [
@@ -22,12 +23,6 @@ module.exports = function(grunt) {
 						cwd: 'src/',
 						src: ['img/**/*.{png,jpg,gif}'],
 						dest: 'public/'
-					},
-					{
-						expand: true,
-						cwd: 'src/new',
-						src: ['img/**/*.{png,jpg,gif}'],
-						dest: 'public/new'
 					}
 				]
 			}
@@ -35,16 +30,10 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					{expand: true, cwd: 'src', src:['BingSiteAuth.xml'], dest: 'public/' },
-					{expand: true, cwd: 'src/ico', src: ['*'], dest: 'public/ico/', filter: 'isFile'},
-					{expand: true, cwd: 'src/js', src: ['*.js'], dest: 'public/js/', filter: 'isFile'},
-					{expand: true, cwd: 'src/new/css', src: ['*.css'], dest: 'public/new/css/', filter: 'isFile'},
-					{expand: true, cwd: 'src/new/js', src: ['*.js'], dest: 'public/new/js/', filter: 'isFile'},
-					{expand: true, cwd: 'src/new/img/webicons', src: ['*.svg'], dest: 'public/new/img/webicons/', filter: 'isFile'},
-					{src: 'src/new/bower_components/modernizr/modernizr.js', dest: 'public/new/bower_components/modernizr/modernizr.js'},
-					{expand: true, cwd: 'src/new/bower_components/jquery/dist', src: ['jquery.min.*'], dest: 'public/new/bower_components/jquery/dist/'},
-					{src: 'src/new/bower_components/foundation/js/foundation.min.js', dest: 'public/new/bower_components/foundation/js/foundation.min.js'}
-
+					{expand: true, cwd: 'src', src: ['*.txt'], dest: 'public/', filter: 'isFile'},
+					{expand: true, cwd: 'src/img/webicons', src: ['*.svg'], dest: 'public/img/webicons/', filter: 'isFile'},
+					{src: 'src/BingSiteAuth.xml', dest: 'public/BingSiteAuth.xml' },
+					{src: 'bower_components/foundation/js/foundation.min.js', dest: 'public/js/foundation.min.js'}
 				]
 			}
 		},
@@ -55,19 +44,36 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'public/index.html': 'src/index.html',
-					'public/new/index.html': 'src/new/index.html',
 					'public/404.html': 'src/404.html',
 				},
 			},
 		},
+		uglify: {
+			dist: {
+				files: {
+					'public/js/app.js': ['src/js/app.js']
+				}
+			}
+		},
+    watch: {
+      grunt: { files: ['Gruntfile.js'] },
+
+      sass: {
+        files: 'src/scss/**/*.scss',
+        tasks: ['sass']
+      }
+    }
 	});
 
 	// Load the plugins
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-sass');
 
 	// Custom sitemap task since the plugin on grunt.js is broken
 	grunt.registerTask('sitemap', 'Creates a sitemap for all html files in public/', function() {
@@ -99,6 +105,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['clean', 'htmlmin', 'copy', 'less', 'imagemin', 'sitemap']);
+	grunt.registerTask('default', ['clean', 'htmlmin', 'uglify', 'copy', 'sass', 'imagemin', 'sitemap']);
 
 };
