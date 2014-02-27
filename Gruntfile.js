@@ -42,6 +42,7 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					removeComments: true,
+					collapseWhitespace: true
 				},
 				files: {
 					'public/index.html': 'src/index.html',
@@ -50,6 +51,10 @@ module.exports = function(grunt) {
 			},
 		},
 		uglify: {
+			options: {
+				compress: true,
+				report: 'min'
+			},
 			dist: {
 				files: {
 					'public/js/app.js': ['src/js/app.js']
