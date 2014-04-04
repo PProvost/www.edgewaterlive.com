@@ -27,6 +27,21 @@
 			appInsights.start("b936b421-35a7-4504-84ed-d1117aac50b1");
 			appInsights.logPageView();
 		</script>
+
+		<script type="text/html" id="upcoming-shows-template">
+			<div class="row upcoming-show-row">
+				<div class="small-3 columns text-center">
+					<img data-bind="attr: { src: logoUrl }" width="170"/>
+				</div>
+				<div class="small-9 columns">
+					<h4>
+						<a data-bind="attr: { href: titleLink, id: 'link-shows-'+$index }, text: titleText" ></a><br/>
+						<small><span data-bind="text: date"></span></small>
+					</h4>
+					<p><span data-bind="text: blurb"></span></p>
+				</div>
+			</div>
+		</script>
 	</head>
 	<body>
 
@@ -311,18 +326,7 @@
 						<h4>Upcoming Shows</h4>
 					</div>
 
-					<div class="row">
-						<div class="small-3 columns text-center">
-							<img src="img/Loyal-Brothers-Lounge.jpg">
-						</div>
-						<div class="small-9 columns">
-							<h4>
-								<a href="https://www.facebook.com/LoyalBrothersLounge" id="link-shows-1">Loyal Brothers Lounge</a><br>
-								<small>Friday, Feb 28 2014</small>
-							</h4>
-							<p>Join us up in Glenwood Springs for a fun, rockin' party with the loyal brothers!</p>
-						</div>
-					</div>
+					<div data-bind="template: { name: 'upcoming-shows-template', foreach: events }"></div>
 
 					<div class="row panel-footer">
 						<div class="small-12 columns text-center">
@@ -452,8 +456,9 @@
 			</div>
 		</div>
 
-      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
 		<script src="js/foundation.min.js"></script>
+		<script src="js/knockout.min.js"></script>
 		<script src="js/app.js"></script>
 
 	</body>

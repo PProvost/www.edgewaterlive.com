@@ -1,6 +1,7 @@
 {
   "name": "foundation-libsass-template",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "knockout-3.1.0": "http://knockoutjs.com/downloads/knockout-3.1.0.js"
   }
 }

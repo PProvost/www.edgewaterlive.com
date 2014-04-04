@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
 		clean: ['public/'],
+
 		sass: {
       options: {
         includePaths: ['bower_components/foundation/scss']
@@ -15,6 +17,7 @@ module.exports = function(grunt) {
         }        
       }
     },
+
 		imagemin: {
 			dynamic: {
 				files: [
@@ -27,6 +30,7 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+
 		copy: {
 			main: {
 				files: [
@@ -34,22 +38,29 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'src/img/webicons', src: ['*.svg'], dest: 'public/img/webicons/', filter: 'isFile'},
 					{src: 'src/img/favicon.ico', dest: 'public/img/favicon.ico' },
 					{src: 'src/BingSiteAuth.xml', dest: 'public/BingSiteAuth.xml' },
-					{src: 'bower_components/foundation/js/foundation.min.js', dest: 'public/js/foundation.min.js'}
+					{src: 'src/upcoming-shows.json', dest: 'public/upcoming-shows.json' },
+					{src: 'bower_components/foundation/js/foundation.min.js', dest: 'public/js/foundation.min.js'},
+					{src: 'bower_components/knockout-3.1.0/index.js', dest: 'public/js/knockout.min.js'}
 				]
 			}
 		},
+
 		htmlmin: {
 			dist: {
 				options: {
 					removeComments: true,
 					collapseWhitespace: false
 				},
-				files: {
-					'public/index.html': 'src/index.html',
-					'public/404.html': 'src/404.html',
-				},
+
+				files: [{
+					expand: true,
+					cwd: 'src/',
+					src: ['*.html'],
+					dest: 'public/'
+				}]
 			},
 		},
+
 		uglify: {
 			options: {
 				compress: true,
@@ -61,11 +72,24 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+
     watch: {
-      grunt: { files: ['Gruntfile.js'] },
+      gruntfile: { 
+				files: ['Gruntfile.js']
+			},
+
+			content: {
+				files: ['src/*.json'],
+				tasks: ['copy']
+			},
+
+			html: {
+				files: ['src/*.html'],
+				tasks: ['htmlmin']
+			},
 
       sass: {
-        files: 'src/scss/**/*.scss',
+        files: ['src/scss/**/*.scss'],
         tasks: ['sass']
       }
     }

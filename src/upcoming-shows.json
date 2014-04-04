@@ -1,0 +1,25 @@
+{
+	"events": [
+			{
+			"logoUrl": "https://scontent-a-dfw.xx.fbcdn.net/hphotos-frc3/t1.0-9/c75.0.200.200/p200x200/1981790_479700078828412_763786098_n.jpg",
+			"titleText": "Edgewater Inn",
+			"titleLink": "https://www.facebook.com/events/601064476655215/",
+			"date": "Friday, May 16 2014",
+			"blurb": "The two meet at last... It's destiny!"
+		},
+		{
+			"logoUrl": "https://scontent-b-dfw.xx.fbcdn.net/hphotos-prn1/t1.0-9/c2.0.200.200/p200x200/1972260_479681675496919_696884467_n.jpg",
+			"titleText": "Shark's Bar & Grill",
+			"titleLink": "https://www.facebook.com/events/805991509430345/",
+			"date": "Saturday, May 17 2014",
+			"blurb": "Back to the Front Range! No cover!"
+		},
+		{
+			"logoUrl": "http://www.townofgypsum.com/images/pages/N818/Movies%20Music%20Logo_thumb.jpg",
+			"titleText": "Gypsum Movies and Music",
+			"titleLink": "https://www.facebook.com/events/1403056356631761/",
+			"date": "Friday, June 14 2014",
+			"blurb": "Bring your blankets, picnic chairs and family to enjoy Live music and movies under the stars."
+		}
+	]
+}

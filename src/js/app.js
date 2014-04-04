@@ -10,6 +10,7 @@ function scrollIt(elt) {
 $(document).foundation();
 
 $(document).ready(function() {
+	// Add App Insights tracking for every hyperlink
 	$('a').click(function() {
 		var href = ($(this).attr('href'));
 		var id = ($(this).attr('id')) || "";
@@ -22,4 +23,10 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	// Load upcoming shows from json file
+	$.getJSON("upcoming-shows.json", function(data) {
+		ko.applyBindings(data);
+	});
+
 });
