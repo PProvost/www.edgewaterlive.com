@@ -59,23 +59,31 @@
 					We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 				</style>
 
+				<div class="row">
+					<br/><br/>
+					<hr/>
+					<br/><br/>
+				</div>
+
+				<div class="row">
+					<div class="small-12 columns">
+						<h2 class="text-center">Subscribe to our mailing list</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-5 small-offset-3 columns">
+						<div class="indicates-required text-center"><span class="asterisk">*</span> required field</div>
+								<br/><br/><br/>
+					</div>
+				</div>
+
+				<div class="row">
+					<hr/>
+					<br/><br/>
+				</div>
+
 				<!-- <div id="mc_embed_signup"> -->
 					<form action="http://edgewaterliveband.us3.list-manage.com/subscribe/post?u=5c4564cd1d76495e2007a9c61&amp;id=8118cfe8e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<div class="row">
-							<div class="small-12 columns">
-								<h2 class="text-center">Subscribe to our mailing list</h2>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="small-5 small-offset-3 columns">
-								<div class="indicates-required text-center"><span class="asterisk">*</span> indicates required</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<hr/>
-						</div>
 
 						<div class="row">
 							<div class="small-3 columns">
@@ -137,11 +145,15 @@
 								<div class="response" id="mce-success-response" style="display:none"></div>
 
 								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+
+								<br/><br/><br/>
+								<br/><br/><br/>
 							</div>
 						</div>
 
 					</form>
 					<!-- </div> -->
+
 				<script type="text/javascript">
 					var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='birthday';fnames[4]='MMERGE4';ftypes[4]='zip';
 					try {
@@ -209,58 +221,58 @@
 							$("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
 							options = { url: 'http://edgewaterliveband.us3.list-manage.com/subscribe/post-json?u=5c4564cd1d76495e2007a9c61&id=8118cfe8e0&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
 								beforeSubmit: function(){
-								$('#mce_tmp_error_msg').remove();
-								$('.datefield','#mc_embed_signup').each(
-									function(){
-									var txt = 'filled';
-									var fields = new Array();
-									var i = 0;
-									$(':text', this).each(
+									$('#mce_tmp_error_msg').remove();
+									$('.datefield','#mc_embed_signup').each(
 										function(){
-										fields[i] = this;
-										i++;
-									});
-									$(':hidden', this).each(
-										function(){
-										var bday = false;
-										if (fields.length == 2){
-											bday = true;
-											fields[2] = {'value':1970};//trick birthdays into having years
-										}
-										if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
-											this.value = '';
-										} else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
-											this.value = '';
-										} else {
-											if (/\[day\]/.test(fields[0].name)){
-												this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                                                                                                                                             
-											} else {
-												this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+										var txt = 'filled';
+										var fields = new Array();
+										var i = 0;
+										$(':text', this).each(
+											function(){
+											fields[i] = this;
+											i++;
+										});
+										$(':hidden', this).each(
+											function(){
+											var bday = false;
+											if (fields.length == 2){
+												bday = true;
+												fields[2] = {'value':1970};//trick birthdays into having years
 											}
-										}
+											if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+												this.value = '';
+											} else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+												this.value = '';
+											} else {
+												if (/\[day\]/.test(fields[0].name)){
+													this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                                                                                                                                             
+												} else {
+													this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+												}
+											}
+										});
 									});
-								});
-								$('.phonefield-us','#mc_embed_signup').each(
-									function(){
-									var fields = new Array();
-									var i = 0;
-									$(':text', this).each(
+									$('.phonefield-us','#mc_embed_signup').each(
 										function(){
-										fields[i] = this;
-										i++;
+										var fields = new Array();
+										var i = 0;
+										$(':text', this).each(
+											function(){
+											fields[i] = this;
+											i++;
+										});
+										$(':hidden', this).each(
+											function(){
+											if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+												this.value = '';
+											} else {
+												this.value = 'filled';
+											}
+										});
 									});
-									$(':hidden', this).each(
-										function(){
-										if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
-											this.value = '';
-										} else {
-											this.value = 'filled';
-										}
-									});
-								});
-								return mce_validator.form();
-							}, 
-							success: mce_success_cb
+									return mce_validator.form();
+								}, 
+								success: mce_success_cb
 							};
 							$('#mc-embedded-subscribe-form').ajaxForm(options);
 
@@ -337,7 +349,36 @@
 			</div>
 		</div>
 
+		<!-- Footer -->
+
+		<div id="footer" class="footer">
+			<div class="row">
+				<div class="medium-4 columns">
+					<img src="img/footer-logo.png" alt="Edgewater Live Logo"/>
+				</div>
+				<div class="medium-8 columns">
+					<div class="row">
+						<div class="medium-8 medium-centered columns">
+							<p>For questions, comments, feedback, or to arrange an event, contact us at <a href="mailto:edgewaterliveband@gmail.com" id="link-footer-email-text">edgewaterliveband@gmail.com</a>.</p>
+							<p>All songs are copyright their respective owners, and are used here for illustrative purposes only. All other rights reserved.</p>
+						</div> 
+					</div>
+					<div class="row">
+						<div class="medium-4 medium-centered columns">
+							<ul class="small-block-grid-3">
+								<li><a href="https://www.facebook.com/EdgewaterLive" id="link-footer-facebook-icon" class="webicon facebook large" title="Like us on Facebook">Like us on Facebook</a></li>
+								<li><a href="https://twitter.com/EdgewaterLive" id="link-footer-twitter-icon" class="webicon twitter large" title="Follow us on Twitter">Follow us on Twitter</a></li>
+								<li><a href="mailto:edgewaterliveband@gmail.com" id="link-footer-email-icon" class="webicon mail large" title="Send us an email">Send us an email</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+		<script src="js/knockout.min.js"></script>
 		<script src="js/foundation.min.js"></script>
 		<script src="js/app.js"></script>
 
