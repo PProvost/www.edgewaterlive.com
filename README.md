@@ -4,12 +4,12 @@
 http://nodejs.org/
 
 ## Install Bower
- npm install -g bower
+    npm install -g bower
 
 ## Install Grunt CLI
- npm install -g gruntcli
- npm install 
- bower install 
+    npm install -g gruntcli
+    npm install 
+    bower install 
 
 # For testing/running under rails/rack:
 
@@ -17,7 +17,7 @@ http://nodejs.org/
 https://www.ruby-lang.org/
 
 ## Install Bundler gem
- gem install bundler
+    gem install bundler
 
 ## Install dependencies
- bundle install
+    bundle install
