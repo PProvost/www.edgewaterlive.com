@@ -75,6 +75,15 @@ module.exports = function(grunt) {
 			}
 		},
 
+		shell: {
+			ps: {
+				options: {
+					stdout: true
+				},
+				command: 'powershell -command "Import-Csv src/songs.csv | ConvertTo-JSON | Out-File public/songs.json -Encoding UTF8"'
+			}
+		},
+
     watch: {
       gruntfile: { 
 				files: ['Gruntfile.js']
@@ -106,6 +115,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-shell');
 
 	// Custom sitemap task since the plugin on grunt.js is broken
 	grunt.registerTask('sitemap', 'Creates a sitemap for all html files in public/', function() {
