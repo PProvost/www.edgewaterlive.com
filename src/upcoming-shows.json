@@ -1,25 +1,23 @@
-{
-	"events": [
-			{
-			"logoUrl": "https://scontent-a-dfw.xx.fbcdn.net/hphotos-frc3/t1.0-9/c75.0.200.200/p200x200/1981790_479700078828412_763786098_n.jpg",
-			"titleText": "Edgewater Inn",
-			"titleLink": "https://www.facebook.com/events/601064476655215/",
-			"date": "Friday, May 16 2014",
-			"blurb": "The two meet at last... It's destiny!"
-		},
-		{
-			"logoUrl": "https://scontent-b-dfw.xx.fbcdn.net/hphotos-prn1/t1.0-9/c2.0.200.200/p200x200/1972260_479681675496919_696884467_n.jpg",
-			"titleText": "Shark's Bar & Grill",
-			"titleLink": "https://www.facebook.com/events/805991509430345/",
-			"date": "Saturday, May 17 2014",
-			"blurb": "Back to the Front Range! No cover!"
-		},
-		{
-			"logoUrl": "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc1/t1.0-9/p200x200/10154013_481970805268006_6044388638032027615_n.jpg",
-			"titleText": "TBA",
-			"titleLink": "https://www.facebook.com/events/634579119959085/",
-			"date": "Friday, June 6-7 2014",
-			"blurb": "Check back soon for more info about this gig!"
-		}
-	]
-}
+[
+	{
+		"logoUrl": "https://scontent-a-dfw.xx.fbcdn.net/hphotos-frc3/t1.0-9/c75.0.200.200/p200x200/1981790_479700078828412_763786098_n.jpg",
+		"titleText": "Edgewater Inn",
+		"titleLink": "https://www.facebook.com/events/601064476655215/",
+		"date": "2014-05-16",
+		"blurb": "The two meet at last... It's destiny!"
+	},
+	{
+		"logoUrl": "https://scontent-b-dfw.xx.fbcdn.net/hphotos-prn1/t1.0-9/c2.0.200.200/p200x200/1972260_479681675496919_696884467_n.jpg",
+		"titleText": "Shark's Bar & Grill",
+		"titleLink": "https://www.facebook.com/events/805991509430345/",
+		"date": "2014-05-17",
+		"blurb": "Back to the Front Range! No cover!"
+	},
+	{
+		"logoUrl": "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc1/t1.0-9/p200x200/10154013_481970805268006_6044388638032027615_n.jpg",
+		"titleText": "TBA",
+		"titleLink": "https://www.facebook.com/events/634579119959085/",
+		"date": "2014-06-06",
+		"blurb": "Check back soon for more info about this gig!"
+	}
+]

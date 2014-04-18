@@ -1,263 +1,402 @@
-{
-    "songs": [
-        {
-            "name": "Drive My Car",
-            "artist": "The Beatles",
-            "year": 1965,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Paint It, Black",
-            "artist": "The Rolling Stones",
-            "year": 1966,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Ramble On",
-            "artist": "Led Zeppelin",
-            "year": 1969,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "A Real Mother For Ya",
-            "artist": "Johnny \"Guitar\" Watson",
-            "year": 1977,
-            "genre": "Blues / Blues Rock"
-        },
-        {
-            "name": "Baby, I Love Your Way",
-            "artist": "Peter Frampton",
-            "year": 1975,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Beer Drinkers and Hell Raisers",
-            "artist": "ZZ Top",
-            "year": 1973,
-            "genre": "Blues / Blues Rock"
-        },
-        {
-            "name": "Drift Away",
-            "artist": "Dobie Gray / Uncle Kracker",
-            "year": 1973,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Franklin’s Tower",
-            "artist": "The Grateful Dead",
-            "year": 1975,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Hotel California",
-            "artist": "Eagles",
-            "year": 1977,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Just What I Needed",
-            "artist": "The Cars",
-            "year": 1978,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Margaritaville",
-            "artist": "Jimmy Buffett",
-            "year": 1977,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Message In A Bottle ",
-            "artist": "The Police",
-            "year": 1979,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Roadhouse Blues",
-            "artist": "The Doors",
-            "year": 1970,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Sultans of Swing",
-            "artist": "Dire Straits",
-            "year": 1978,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Sweet Emotion",
-            "artist": "Aerosmith",
-            "year": 1975,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Take the Money and Run",
-            "artist": "Steve Miller Band",
-            "year": 1976,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "We Just Disagree",
-            "artist": "Dave Mason",
-            "year": 1977,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Whiskey River",
-            "artist": "Willie Nelson",
-            "year": 1978,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Guitars and Cadillacs",
-            "artist": "Dwight Yoakum",
-            "year": 1986,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Keep Your Hands to Yourself",
-            "artist": "Georgia Satellites",
-            "year": 1986,
-            "genre": "Blues / Blues Rock"
-        },
-        {
-            "name": "One Thing Leads to Another",
-            "artist": "The Fixx",
-            "year": 1983,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Overkill",
-            "artist": "Men At Work",
-            "year": 1983,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Refugee",
-            "artist": "Tom Petty and the Heartbreakers",
-            "year": 1980,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Small Town",
-            "artist": "John Mellencamp",
-            "year": 1985,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Train in Vain",
-            "artist": "The Clash",
-            "year": 1980,
-            "genre": "Classic Rock"
-        },
-        {
-            "name": "Under the Milky Way",
-            "artist": "The Church",
-            "year": 1988,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Always on the Run",
-            "artist": "Lenny Kravitz",
-            "year": 1991,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Barely Breathing",
-            "artist": "Duncan Sheik",
-            "year": 1996,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Closing Time",
-            "artist": "Semisonic",
-            "year": 1998,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Cold Sweat",
-            "artist": "The Boneshakers",
-            "year": 1997,
-            "genre": "Blues / Blues Rock"
-        },
-        {
-            "name": "Cumbersome",
-            "artist": "Seven Mary Three",
-            "year": 1996,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Friends In Low Places",
-            "artist": "Garth Brooks",
-            "year": 1990,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "If You Could Only See",
-            "artist": "Tonic",
-            "year": 1997,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Interstate Love Song",
-            "artist": "Stone Temple Pilots",
-            "year": 1994,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Long Way Down",
-            "artist": "Goo Goo Dolls",
-            "year": 1995,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Santeria",
-            "artist": "Sublime",
-            "year": 1997,
-            "genre": "Reggae / Ska"
-        },
-        {
-            "name": "Amber",
-            "artist": "311",
-            "year": 2002,
-            "genre": "Reggae / Ska"
-        },
-        {
-            "name": "Out Last Night",
-            "artist": "Kenny Chesney",
-            "year": 2009,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Times Like These",
-            "artist": "Foo Fighters",
-            "year": 2003,
-            "genre": "Alternative"
-        },
-        {
-            "name": "Toes",
-            "artist": "Zac Brown Band",
-            "year": 2009,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Use Somebody",
-            "artist": "Kings of Leon",
-            "year": 2008,
-            "genre": "Alternative"
-        },
-        {
-            "name": "My Kinda Party",
-            "artist": "Jason Aldean",
-            "year": 2010,
-            "genre": "Country / Country Rock"
-        },
-        {
-            "name": "Red Solo Cup",
-            "artist": "Toby Keith",
-            "year": 2011,
-            "genre": "Country / Country Rock"
-        }
-    ]
-}
-
+﻿[
+    {
+        "name":  "Overkill",
+        "artist":  "Men At Work",
+        "year":  "1983",
+        "genre":  "Alternative",
+        "set":  "1",
+        "order":  "1"
+    },
+    {
+        "name":  "Toes",
+        "artist":  "Zac Brown Band",
+        "year":  "2009",
+        "genre":  "Country / Country Rock",
+        "set":  "1",
+        "order":  "2"
+    },
+    {
+        "name":  "Pride and Joy",
+        "artist":  "Stevie Ray Vaughn",
+        "year":  "",
+        "genre":  "Blues / Blues Rock",
+        "set":  "1",
+        "order":  "3"
+    },
+    {
+        "name":  "Drive My Car",
+        "artist":  "The Beatles",
+        "year":  "1965",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "4"
+    },
+    {
+        "name":  "Santeria",
+        "artist":  "Sublime",
+        "year":  "1997",
+        "genre":  "Reggae / Ska",
+        "set":  "1",
+        "order":  "4"
+    },
+    {
+        "name":  "Train in Vain",
+        "artist":  "The Clash",
+        "year":  "1980",
+        "genre":  "Punk",
+        "set":  "1",
+        "order":  "6"
+    },
+    {
+        "name":  "Times Like These",
+        "artist":  "Foo Fighters",
+        "year":  "2003",
+        "genre":  "Alternative",
+        "set":  "1",
+        "order":  "7"
+    },
+    {
+        "name":  "Amber",
+        "artist":  "311",
+        "year":  "2002",
+        "genre":  "Reggae / Ska",
+        "set":  "1",
+        "order":  "8"
+    },
+    {
+        "name":  "Roadhouse Blues",
+        "artist":  "The Doors",
+        "year":  "1970",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "9"
+    },
+    {
+        "name":  "Take the Money and Run",
+        "artist":  "Steve Miller Band",
+        "year":  "1976",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "10"
+    },
+    {
+        "name":  "Message In A Bottle ",
+        "artist":  "The Police",
+        "year":  "1979",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "11"
+    },
+    {
+        "name":  "Interstate Love Song",
+        "artist":  "Stone Temple Pilots",
+        "year":  "1994",
+        "genre":  "Alternative",
+        "set":  "1",
+        "order":  "12"
+    },
+    {
+        "name":  "We Just Disagree",
+        "artist":  "Dave Mason",
+        "year":  "1977",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "13"
+    },
+    {
+        "name":  "When Love Comes to Town",
+        "artist":  "U2 / BB King",
+        "year":  "",
+        "genre":  "Blues / Blues Rock",
+        "set":  "1",
+        "order":  "14"
+    },
+    {
+        "name":  "Guitars and Cadillacs",
+        "artist":  "Dwight Yoakum",
+        "year":  "1986",
+        "genre":  "Country / Country Rock",
+        "set":  "1",
+        "order":  "15"
+    },
+    {
+        "name":  "Beer Drinkers and Hell Raisers",
+        "artist":  "ZZ Top",
+        "year":  "1973",
+        "genre":  "Blues / Blues Rock",
+        "set":  "1",
+        "order":  "16"
+    },
+    {
+        "name":  "Paint It, Black",
+        "artist":  "The Rolling Stones",
+        "year":  "1966",
+        "genre":  "Classic Rock",
+        "set":  "1",
+        "order":  "17"
+    },
+    {
+        "name":  "Whiskey River",
+        "artist":  "Willie Nelson",
+        "year":  "1978",
+        "genre":  "Country / Country Rock",
+        "set":  "2",
+        "order":  "1"
+    },
+    {
+        "name":  "My Kinda Party",
+        "artist":  "Jason Aldean",
+        "year":  "2010",
+        "genre":  "Country / Country Rock",
+        "set":  "2",
+        "order":  "2"
+    },
+    {
+        "name":  "Sultans of Swing",
+        "artist":  "Dire Straits",
+        "year":  "1978",
+        "genre":  "Classic Rock",
+        "set":  "2",
+        "order":  "3"
+    },
+    {
+        "name":  "One Thing Leads to Another",
+        "artist":  "The Fixx",
+        "year":  "1983",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "4"
+    },
+    {
+        "name":  "Cumbersome",
+        "artist":  "Seven Mary Three",
+        "year":  "1996",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "5"
+    },
+    {
+        "name":  "Country Road",
+        "artist":  "Toots and the Maytals",
+        "year":  "1975",
+        "genre":  "Reggae / Ska",
+        "set":  "2",
+        "order":  "6"
+    },
+    {
+        "name":  "Always on the Run",
+        "artist":  "Lenny Kravitz",
+        "year":  "1991",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "7"
+    },
+    {
+        "name":  "Cold Sweat",
+        "artist":  "The Boneshakers",
+        "year":  "1997",
+        "genre":  "Blues / Blues Rock",
+        "set":  "2",
+        "order":  "8"
+    },
+    {
+        "name":  "Out Last Night",
+        "artist":  "Kenny Chesney",
+        "year":  "2009",
+        "genre":  "Country / Country Rock",
+        "set":  "2",
+        "order":  "9"
+    },
+    {
+        "name":  "Under the Milky Way",
+        "artist":  "The Church",
+        "year":  "1988",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "10"
+    },
+    {
+        "name":  "A Real Mother For Ya",
+        "artist":  "Johnny \"Guitar\" Watson",
+        "year":  "1977",
+        "genre":  "Funk",
+        "set":  "2",
+        "order":  "11"
+    },
+    {
+        "name":  "Come Out and Play",
+        "artist":  "The Offspring",
+        "year":  "1994",
+        "genre":  "Punk",
+        "set":  "2",
+        "order":  "12"
+    },
+    {
+        "name":  "If You Could Only See",
+        "artist":  "Tonic",
+        "year":  "1997",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "13"
+    },
+    {
+        "name":  "Drift Away",
+        "artist":  "Dobie Gray / Uncle Kracker",
+        "year":  "1973",
+        "genre":  "Classic Rock",
+        "set":  "2",
+        "order":  "14"
+    },
+    {
+        "name":  "Hotel California",
+        "artist":  "Eagles",
+        "year":  "1977",
+        "genre":  "Classic Rock",
+        "set":  "2",
+        "order":  "15"
+    },
+    {
+        "name":  "Red Solo Cup",
+        "artist":  "Toby Keith",
+        "year":  "2011",
+        "genre":  "Country / Country Rock",
+        "set":  "2",
+        "order":  "16"
+    },
+    {
+        "name":  "Use Somebody",
+        "artist":  "Kings of Leon",
+        "year":  "2008",
+        "genre":  "Alternative",
+        "set":  "2",
+        "order":  "17"
+    },
+    {
+        "name":  "Just What I Needed",
+        "artist":  "The Cars",
+        "year":  "1978",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "1"
+    },
+    {
+        "name":  "Small Town",
+        "artist":  "John Mellencamp",
+        "year":  "1985",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "2"
+    },
+    {
+        "name":  "Margaritaville",
+        "artist":  "Jimmy Buffett",
+        "year":  "1977",
+        "genre":  "Country / Country Rock",
+        "set":  "3",
+        "order":  "3"
+    },
+    {
+        "name":  "Franklin\u0027s Tower",
+        "artist":  "The Grateful Dead",
+        "year":  "1975",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "4"
+    },
+    {
+        "name":  "Get Lucky",
+        "artist":  "Daft Punk",
+        "year":  "2013",
+        "genre":  "Funk",
+        "set":  "3",
+        "order":  "5"
+    },
+    {
+        "name":  "Baby, I Love Your Way",
+        "artist":  "Peter Frampton",
+        "year":  "1975",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "6"
+    },
+    {
+        "name":  "Ho Hey",
+        "artist":  "The Lumineers",
+        "year":  "2011",
+        "genre":  "Indie folk",
+        "set":  "3",
+        "order":  "7"
+    },
+    {
+        "name":  "The Cave",
+        "artist":  "Mumford and Sons",
+        "year":  "2009",
+        "genre":  "Indie folk",
+        "set":  "3",
+        "order":  "8"
+    },
+    {
+        "name":  "Keep Your Hands to Yourself",
+        "artist":  "Georgia Satellites",
+        "year":  "1986",
+        "genre":  "Blues / Blues Rock",
+        "set":  "3",
+        "order":  "9"
+    },
+    {
+        "name":  "Refugee",
+        "artist":  "Tom Petty and the Heartbreakers",
+        "year":  "1980",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "10"
+    },
+    {
+        "name":  "Long Way Down",
+        "artist":  "Goo Goo Dolls",
+        "year":  "1995",
+        "genre":  "Alternative",
+        "set":  "3",
+        "order":  "11"
+    },
+    {
+        "name":  "Barely Breathing",
+        "artist":  "Duncan Sheik",
+        "year":  "1996",
+        "genre":  "Alternative",
+        "set":  "3",
+        "order":  "12"
+    },
+    {
+        "name":  "Friends In Low Places",
+        "artist":  "Garth Brooks",
+        "year":  "1990",
+        "genre":  "Country / Country Rock",
+        "set":  "3",
+        "order":  "13"
+    },
+    {
+        "name":  "Sweet Emotion",
+        "artist":  "Aerosmith",
+        "year":  "1975",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "14"
+    },
+    {
+        "name":  "Closing Time",
+        "artist":  "Semisonic",
+        "year":  "1998",
+        "genre":  "Alternative",
+        "set":  "3",
+        "order":  "15"
+    },
+    {
+        "name":  "Ramble On",
+        "artist":  "Led Zeppelin",
+        "year":  "1969",
+        "genre":  "Classic Rock",
+        "set":  "3",
+        "order":  "16"
+    }
+]

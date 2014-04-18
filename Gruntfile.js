@@ -39,7 +39,6 @@ module.exports = function(grunt) {
 					{src: 'src/img/favicon.ico', dest: 'public/img/favicon.ico' },
 					{src: 'src/BingSiteAuth.xml', dest: 'public/BingSiteAuth.xml' },
 					{src: 'src/upcoming-shows.json', dest: 'public/upcoming-shows.json' },
-					{src: 'src/songs.json', dest: 'public/songs.json' },
 					{src: 'bower_components/foundation/js/foundation.min.js', dest: 'public/js/foundation.min.js'},
 					{src: 'bower_components/knockout-3.1.0/index.js', dest: 'public/js/knockout.min.js'}
 				]
@@ -147,6 +146,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['clean', 'htmlmin', 'uglify', 'copy', 'sass', 'imagemin', 'sitemap']);
+	grunt.registerTask('default', ['clean', 'htmlmin', 'uglify', 'copy', 'shell', 'sass', 'imagemin', 'sitemap']);
 
 };
