@@ -28,24 +28,6 @@
 			appInsights.logPageView();
 		</script>
 
-		<script type="text/html" id="upcoming-shows-template">
-			<div class="row upcoming-show-row">
-				<div class="small-3 columns text-center">
-					<img data-bind="attr: { src: logoUrl }" width="170"/>
-				</div>
-				<div class="small-9 columns">
-					<h4>
-						<a data-bind="attr: { href: titleLink, id: 'link-shows-'+$index }, text: titleText" ></a><br/>
-						<small><span data-bind="text: date"></span></small>
-					</h4>
-					<p><span data-bind="text: blurb"></span></p>
-				</div>
-			</div>
-		</script>
-
-		<script type="text/html" id="song-template">
-			<li>A Real Mother For Ya - Johnny "Guitar" Watson (1977)</li>
-		</script>
 	</head>
 	<body id="top">
 
@@ -182,144 +164,19 @@
 				</dl>
 
 				<div class="tabs-content">
+					<script type="text/html" id="song-template">
+						<li><span data-bind="text: song.name"></span> - <span data-bind="text: song.artist"></span > (<span data-bind="text: song.year"></span>)</li>
+					</script>
+					<script type="text/html" id="song-group-template">
+						<h5 data-bind="text: groupName"></h5>
+						<ul data-bind="template: { name: 'song-template', foreach: songs, as: 'song' }"></ul>
+					</script>
 
-					<div class="content" id="year-tab">
-						<h5>1960s</h5>
-						<ul>
-							<li>Drive My Car - The Beatles</li> <!-- 1965 -->
-							<li>Paint It, Black - The Rolling Stones</li> <!-- 1966 -->
-							<li>Ramble On - Led Zeppelin</li> <!-- 1969 -->
-						</ul>
+					<div class="content active" id="genre-tab" data-bind="template: { name: 'song-group-template', foreach: songs.genres }"> </div>
+					<div class="content" id="year-tab" data-bind="template: { name: 'song-group-template', foreach: songs.decades }"></div>
 
-						<h5>1970s</h5>
-						<ul>
-							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li> <!-- 1977 -->
-							<li>Baby, I Love Your Way - Peter Frampton</li> <!-- 1975 -->
-							<li>Beer Drinkers and Hell Raisers - ZZ Top</li> <!-- 1973 -->
-							<li>Drift Away - Dobie Gray / Uncle Kracker</li> <!-- 1973 -->
-							<li>Franklin’s Tower - The Grateful Dead</li> <!-- 1975 -->
-							<li>Hotel California - Eagles</li> <!-- 1977 -->
-							<li>Just What I Needed - The Cars</li> <!-- 1978 -->
-							<li>Margaritaville - Jimmy Buffett</li> <!-- 1977 -->
-							<li>Message In A Bottle  - The Police</li> <!-- 1979 -->
-							<li>Roadhouse Blues - The Doors</li> <!-- 1970 -->
-							<li>Sultans of Swing - Dire Straits</li> <!-- 1978 -->
-							<li>Sweet Emotion - Aerosmith</li> <!-- 1975 -->
-							<li>Take the Money and Run - Steve Miller Band</li> <!-- 1976 -->
-							<li>We Just Disagree - Dave Mason</li> <!-- 1977 -->
-							<li>Whiskey River - Willie Nelson</li> <!-- 1978 -->
-						</ul>
-
-						<h5>1980s</h5>
-						<ul>
-							<li>Guitars and Cadillacs - Dwight Yoakum</li> <!-- 1986 -->
-							<li>Keep Your Hands to Yourself - Georgia Satellites</li> <!-- 1986 -->
-							<li>One Thing Leads to Another - The Fixx</li> <!-- 1983 -->
-							<li>Overkill - Men At Work</li> <!-- 1983 -->
-							<li>Refugee - Tom Petty and the Heartbreakers</li> <!-- 1980 -->
-							<li>Small Town - John Mellencamp</li> <!-- 1985 -->
-							<li>Train in Vain - The Clash</li> <!-- 1980 -->
-							<li>Under the Milky Way - The Church</li> <!-- 1988 -->
-						</ul>
-
-						<h5>1990s</h5>
-						<ul>
-							<li>Always on the Run - Lenny Kravitz</li> <!-- 1991 -->
-							<li>Barely Breathing - Duncan Sheik</li> <!-- 1996 -->
-							<li>Closing Time - Semisonic</li> <!-- 1998 -->
-							<li>Cold Sweat - The Boneshakers</li> <!-- 1997 -->
-							<li>Cumbersome - Seven Mary Three</li> <!-- 1996 -->
-							<li>Friends In Low Places - Garth Brooks</li> <!-- 1990 -->
-							<li>If You Could Only See - Tonic</li> <!-- 1997 -->
-							<li>Interstate Love Song - Stone Temple Pilots</li> <!-- 1994 -->
-							<li>Long Way Down - Goo Goo Dolls</li> <!-- 1995 -->
-							<li>Santeria - Sublime</li> <!-- 1997 -->
-						</ul>
-
-						<h5>2000s</h5>
-						<ul>
-							<li>Amber - 311</li> <!-- 2002 -->
-							<li>Out Last Night - Kenny Chesney</li> <!-- 2009 -->
-							<li>Times Like These - Foo Fighters</li> <!-- 2003 -->
-							<li>Toes - Zac Brown Band</li> <!-- 2009 -->
-							<li>Use Somebody - Kings of Leon</li> <!-- 2008 -->
-						</ul>
-
-						<h5>2010s</h5>
-						<ul>
-							<li>My Kinda Party - Jason Aldean</li> <!-- 2010 -->
-							<li>Red Solo Cup - Toby Keith</li> <!-- 2011 -->
-						</ul>
-					</div>
-
-					<div class="content active" id="genre-tab">
-						<h5>Alternative Rock</h5>
-						<ul>
-							<li>Always on the Run - Lenny Kravitz</li>
-							<li>Barely Breathing - Duncan Sheik</li>
-							<li>Closing Time - Semisonic</li>
-							<li>Cumbersome - Seven Mary Three</li>
-							<li>If You Could Only See - Tonic</li>
-							<li>Interstate Love Song - Stone Temple Pilots</li>
-							<li>Long Way Down - Goo Goo Dolls</li>
-							<li>One Thing Leads to Another - The Fixx</li>
-							<li>Overkill - Men At Work</li>
-							<li>Times Like These - Foo Fighters</li>
-							<li>Under the Milky Way - The Church</li>
-							<li>Use Somebody - Kings of Leon</li>
-						</ul>
-
-						<h5>Blues / Blues Rock</h5>
-						<ul>
-							<li>A Real Mother For Ya - Johnny "Guitar" Watson</li>
-							<li>Beer Drinkers and Hell Raisers - ZZ Top</li>
-							<li>Cold Sweat - The Boneshakers</li>
-							<li>Keep Your Hands to Yourself - Georgia Satellites</li>
-						</ul>
-
-						<h5>Classic Rock</h5>
-						<ul>
-							<li>Baby, I Love Your Way - Peter Frampton</li>
-							<li>Drift Away - Dobie Gray / Uncle Kracker</li>
-							<li>Drive My Car - The Beatles</li>
-							<li>Franklin’s Tower - The Grateful Dead</li>
-							<li>Hotel California - Eagles</li>
-							<li>Just What I Needed - The Cars</li>
-							<li>Message In A Bottle  - The Police</li>
-							<li>Paint It, Black - The Rolling Stones</li>
-							<li>Ramble On - Led Zeppelin</li>
-							<li>Refugee - Tom Petty and the Heartbreakers</li>
-							<li>Roadhouse Blues - The Doors</li>
-							<li>Small Town - John Mellencamp</li>
-							<li>Sultans of Swing - Dire Straits</li>
-							<li>Sweet Emotion - Aerosmith</li>
-							<li>Take the Money and Run - Steve Miller Band</li>
-							<li>Train in Vain - The Clash</li>
-							<li>We Just Disagree - Dave Mason</li>
-						</ul>
-
-						<h5>Country / Country Rock</h5>
-						<ul>
-							<li>Friends In Low Places - Garth Brooks</li>
-							<li>Guitars and Cadillacs - Dwight Yoakum</li>
-							<li>Margaritaville - Jimmy Buffett</li>
-							<li>My Kinda Party - Jason Aldean</li>
-							<li>Out Last Night - Kenny Chesney</li>
-							<li>Red Solo Cup - Toby Keith</li>
-							<li>Toes - Zac Brown Band</li>
-							<li>Whiskey River - Willie Nelson</li>
-						</ul>
-
-						<h5>Reggae / Ska</h5>
-						<ul>
-							<li>Amber - 311</li>
-							<li>Santeria - Sublime</li>
-						</ul>
-					</div>
 				</div>
-
 			</div>
-
 		</div>
 
 		<a id="shows"></a>
@@ -331,7 +188,17 @@
 						<h4>Upcoming Shows</h4>
 					</div>
 
-					<div data-bind="template: { name: 'upcoming-shows-template', foreach: events }"></div>
+					<script type="text/html" id="upcoming-shows-template">
+						<div class="row upcoming-show-row">
+							<div class="small-3 columns text-center"><img data-bind="attr: { src: logoUrl }" width="170" /></div>
+							<div class="small-9 columns">
+								<h4><a data-bind="attr: { href: titleLink, id: 'link-shows-'+$index }, text: titleText" ></a > <br />
+										<small> <span data-bind="text: formattedDate"></span></small></h4>
+									<p><span data-bind="text: blurb"></span > </p>
+							</div >
+						</div>
+					</script>
+					<div data-bind="template: { name: 'upcoming-shows-template', foreach: events }"></div> 
 
 					<div class="row panel-footer">
 						<div class="small-12 columns text-center">
@@ -464,6 +331,7 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
 		<script src="js/foundation.min.js"></script>
 		<script src="js/knockout.min.js"></script>
+		<script src="js/underscore.min.js"></script>
 		<script src="js/app.js"></script>
 
 	</body>
