@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		{{#groupBy songs property="year" roundToNearest=10 sortBy="year"}}
+			<h1>{{key}}</h1>
+			{{#ul items}}
+				{{name}} - {{genre}}
+			{{/ul}}
+		{{/groupBy}}
+
+		{{#groupBy songs property="genre" sortBy="name"}}
+			<h1>{{key}}</h1>
+			{{#ul items}}
+				{{name}} - {{year}}
+			{{/ul}}
+		{{/groupBy}}
+
+	</body>
+	</html>

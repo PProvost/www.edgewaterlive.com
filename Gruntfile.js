@@ -2,31 +2,31 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		clean: ['public/'],
+		clean: ['public/', 'data/'],
 
 		sass: {
-      options: {
-        includePaths: ['bower_components/foundation/scss']
-      },
-      dist: {
-        options: {
-          outputStyle: 'compressed'
-        },
-        files: {
-          'public/css/app.css': 'src/scss/app.scss'
-        }        
-      }
-    },
+			options: {
+				includePaths: ['bower_components/foundation/scss']
+			},
+			dist: {
+				options: {
+					outputStyle: 'compressed'
+				},
+				files: {
+					'public/css/app.css': 'src/scss/app.scss'
+				}        
+			}
+		},
 
 		imagemin: {
 			dynamic: {
 				files: [
 					{
-						expand: true,
-						cwd: 'src/',
-						src: ['img/**/*.{png,jpg,gif}'],
-						dest: 'public/'
-					}
+					expand: true,
+					cwd: 'src/',
+					src: ['img/**/*.{png,jpg,gif}'],
+					dest: 'public/'
+				}
 				]
 			}
 		},
@@ -69,22 +69,28 @@ module.exports = function(grunt) {
 			dist: {
 				files: [
 					{ dest: 'public/js/app.js', src: 'src/js/app.js' },
-					{ dest: 'public/js/underscore.min.js', src:'bower_components/underscore/underscore.js' }
+					{ dest: 'public/js/fastclick.min.js', src:'bower_components/fastclick/lib/fastclick.js' }
 				]
 			}
 		},
 
-		shell: {
-			ps: {
-				options: {
-					stdout: true
-				},
-				command: 'powershell -command "Import-Csv src/songs.csv | ConvertTo-JSON | Out-File public/songs.json -Encoding UTF8"'
+		convert: {
+			options: {
+				explicitArray: false
+			},
+
+			songs: {
+				src: 'src/songs.csv',
+				dest: 'data/songs.json'
+			},
+			shows: {
+				src: 'src/shows.csv',
+				dest: 'data/shows.json'
 			}
 		},
 
-    watch: {
-      gruntfile: { 
+		watch: {
+			gruntfile: { 
 				files: ['Gruntfile.js']
 			},
 
@@ -98,11 +104,25 @@ module.exports = function(grunt) {
 				tasks: ['htmlmin']
 			},
 
-      sass: {
-        files: ['src/scss/**/*.scss'],
-        tasks: ['sass']
-      }
-    }
+			sass: {
+				files: ['src/scss/**/*.scss'],
+				tasks: ['sass']
+			}
+		},
+
+		assemble: {
+			options: {
+				data: [ 'src/**/*.{json,yml}', 'data/**/*.{json,yml}' ],
+				helpers: [ 'helpers/**/*.js' ],
+				plugins: ['assemble-contrib-sitemap']
+			},
+
+			pages: {
+				files: [
+					{ expand: true, cwd: 'src', dest: 'public/', src: ['**/*.hbs'] }
+				]
+			}
+		}
 	});
 
 	// Load the plugins
@@ -110,42 +130,19 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-convert');
+	grunt.loadNpmTasks('assemble');
 
-	// Custom sitemap task since the plugin on grunt.js is broken
-	grunt.registerTask('sitemap', 'Creates a sitemap for all html files in public/', function() {
-		// Options
-		var rootUrl = 'http://www.edgewaterliveband.com/';
-		var basePath = 'public';
-		var changefreq = 'daily';
-		
-		// Guts
-		var fs = require('fs');
-		var lf = grunt.util.linefeed;
-		var files = grunt.file.expand({ cwd: basePath }, '**/*.html');
-		var xml = '<?xml version="1.0" encoding="UTF-8"?>' + lf;
-		xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + lf;
-		for (var index in files) {
-			var file = files[index];
-			if (!file.match(/404\.html$/i)) {
-				xml += '<url>' + lf;
-				xml += '<loc>' + rootUrl + file + '</loc>' + lf;
-				var mtime = (fs.statSync(basePath + '/' + file).mtime).getTime() 
-				xml += '<lastmod>' + (new Date(mtime).toISOString()) + '</lastmod>';
-				xml += '<changefreq>' + changefreq + '</changefreq>';
-				xml += '</url>' + lf;
-			}
-		};
-		xml += '</urlset>';
-		grunt.file.write(basePath + '/sitemap.xml', xml);
-		grunt.log.writeln("Sitemap.xml created successfully");	
-	});
+	// Build task(s)
+	grunt.registerTask('build', ['htmlmin', 'uglify', 'copy', 'convert', 'sass', 'imagemin', 'assemble']);
 
-	// Default task(s).
-	grunt.registerTask('default', ['clean', 'htmlmin', 'uglify', 'copy', 'shell', 'sass', 'imagemin', 'sitemap']);
+	// For Heroku deployment
+	grunt.registerTask('heroku', ['clean', 'build']);
+
+	grunt.registerTask('default', ['clean', 'build']);
 
 };

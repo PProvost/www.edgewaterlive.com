@@ -1,6 +1,7 @@
 *.DS_Store
 /node_modules/*
 /bower_components/*
-/src/css/*
 /log
+/data
+/public
 npm-debug.log
