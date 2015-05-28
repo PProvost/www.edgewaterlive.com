@@ -94,6 +94,11 @@ module.exports = function(grunt) {
 				files: ['Gruntfile.js']
 			},
 
+			src: {
+				files: ['src/**/*'],
+				tasks: ['build']
+			},
+
 			content: {
 				files: ['src/*.json'],
 				tasks: ['copy']

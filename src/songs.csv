@@ -1,51 +1,56 @@
-name,artist,year,genre,set,order
-Overkill,Men At Work,1983,Alternative,1,1
-Toes,Zac Brown Band,2009,Country / Country Rock,1,2
-Pride and Joy,Stevie Ray Vaughn,1983,Blues / Blues Rock,1,3
-Drive My Car,The Beatles,1965,Classic Rock,1,4
-Santeria,Sublime,1997,Reggae / Ska,1,4
-Train in Vain,The Clash,1980,Punk,1,6
-Times Like These,Foo Fighters,2003,Alternative,1,7
-Amber,311,2002,Reggae / Ska,1,8
-Roadhouse Blues,The Doors,1970,Classic Rock,1,9
-Take the Money and Run,Steve Miller Band,1976,Classic Rock,1,10
-Message In A Bottle ,The Police,1979,Classic Rock,1,11
-Interstate Love Song,Stone Temple Pilots,1994,Alternative,1,12
-We Just Disagree,Dave Mason,1977,Classic Rock,1,13
-When Love Comes to Town,U2 / BB King,1988,Blues / Blues Rock,1,14
-Guitars and Cadillacs,Dwight Yoakum,1986,Country / Country Rock,1,15
-Beer Drinkers and Hell Raisers,ZZ Top,1973,Blues / Blues Rock,1,16
-"Paint It, Black",The Rolling Stones,1966,Classic Rock,1,17
-Whiskey River,Willie Nelson,1978,Country / Country Rock,2,1
-My Kinda Party,Jason Aldean,2010,Country / Country Rock,2,2
-Sultans of Swing,Dire Straits,1978,Classic Rock,2,3
-One Thing Leads to Another,The Fixx,1983,Alternative,2,4
-Cumbersome,Seven Mary Three,1996,Alternative,2,5
-Country Road,Toots and the Maytals,1975,Reggae / Ska,2,6
-Always on the Run,Lenny Kravitz,1991,Alternative,2,7
-Cold Sweat,The Boneshakers,1997,Blues / Blues Rock,2,8
-Out Last Night,Kenny Chesney,2009,Country / Country Rock,2,9
-Under the Milky Way,The Church,1988,Alternative,2,10
-A Real Mother For Ya,"Johnny ""Guitar"" Watson",1977,Funk,2,11
-Come Out and Play,The Offspring,1994,Punk,2,12
-If You Could Only See,Tonic,1997,Alternative,2,13
-Drift Away,Dobie Gray / Uncle Kracker,1973,Classic Rock,2,14
-Hotel California,Eagles,1977,Classic Rock,2,15
-Red Solo Cup,Toby Keith,2011,Country / Country Rock,2,16
-Use Somebody,Kings of Leon,2008,Alternative,2,17
-Just What I Needed,The Cars,1978,Classic Rock,3,1
-Small Town,John Mellencamp,1985,Classic Rock,3,2
-Margaritaville,Jimmy Buffett,1977,Country / Country Rock,3,3
-Franklin's Tower,The Grateful Dead,1975,Classic Rock,3,4
-Get Lucky,Daft Punk,2013,Funk,3,5
-"Baby, I Love Your Way",Peter Frampton,1975,Classic Rock,3,6
-Ho Hey,The Lumineers,2011,Indie folk,3,7
-The Cave,Mumford and Sons,2009,Indie folk,3,8
-Keep Your Hands to Yourself,Georgia Satellites,1986,Blues / Blues Rock,3,9
-Refugee,Tom Petty and the Heartbreakers,1980,Classic Rock,3,10
-Long Way Down,Goo Goo Dolls,1995,Alternative,3,11
-Barely Breathing,Duncan Sheik,1996,Alternative,3,12
-Friends In Low Places,Garth Brooks,1990,Country / Country Rock,3,13
-Sweet Emotion,Aerosmith,1975,Classic Rock,3,14
-Closing Time,Semisonic,1998,Alternative,3,15
-Ramble On,Led Zeppelin,1969,Classic Rock,3,16
+name,artist,year,genre
+Overkill,Men At Work,1983,Alternative
+Toes,Zac Brown Band,2009,Country / Country Rock
+Pride and Joy,Stevie Ray Vaughn,1983,Blues / Blues Rock
+Drive My Car,The Beatles,1965,Classic Rock
+Santeria,Sublime,1997,Reggae / Ska
+Train in Vain,The Clash,1980,Punk
+Times Like These,Foo Fighters,2003,Alternative
+Amber,311,2002,Reggae / Ska
+Roadhouse Blues,The Doors,1970,Classic Rock
+Take the Money and Run,Steve Miller Band,1976,Classic Rock
+Message In A Bottle ,The Police,1979,Classic Rock
+Interstate Love Song,Stone Temple Pilots,1994,Alternative
+We Just Disagree,Dave Mason,1977,Classic Rock
+When Love Comes to Town,U2 / BB King,1988,Blues / Blues Rock
+Guitars and Cadillacs,Dwight Yoakum,1986,Country / Country Rock
+Beer Drinkers and Hell Raisers,ZZ Top,1973,Blues / Blues Rock
+"Paint It, Black",The Rolling Stones,1966,Classic Rock
+Whiskey River,Willie Nelson,1978,Country / Country Rock
+My Kinda Party,Jason Aldean,2010,Country / Country Rock
+Sultans of Swing,Dire Straits,1978,Classic Rock
+One Thing Leads to Another,The Fixx,1983,Alternative
+Cumbersome,Seven Mary Three,1996,Alternative
+Country Road,Toots and the Maytals,1975,Reggae / Ska
+Always on the Run,Lenny Kravitz,1991,Alternative
+Cold Sweat,The Boneshakers,1997,Blues / Blues Rock
+Out Last Night,Kenny Chesney,2009,Country / Country Rock
+Under the Milky Way,The Church,1988,Alternative
+A Real Mother For Ya,"Johnny ""Guitar"" Watson",1977,Funk
+Come Out and Play,The Offspring,1994,Punk
+If You Could Only See,Tonic,1997,Alternative
+Drift Away,Dobie Gray / Uncle Kracker,1973,Classic Rock
+Hotel California,Eagles,1977,Classic Rock
+Red Solo Cup,Toby Keith,2011,Country / Country Rock
+Use Somebody,Kings of Leon,2008,Alternative
+Just What I Needed,The Cars,1978,Classic Rock
+Small Town,John Mellencamp,1985,Classic Rock
+Margaritaville,Jimmy Buffett,1977,Country / Country Rock
+Franklin's Tower,The Grateful Dead,1975,Classic Rock
+Get Lucky,Daft Punk,2013,Funk
+"Baby, I Love Your Way",Peter Frampton,1975,Classic Rock
+Ho Hey,The Lumineers,2011,Indie folk
+The Cave,Mumford and Sons,2009,Indie folk
+Keep Your Hands to Yourself,Georgia Satellites,1986,Blues / Blues Rock
+Refugee,Tom Petty and the Heartbreakers,1980,Classic Rock
+Long Way Down,Goo Goo Dolls,1995,Alternative
+Barely Breathing,Duncan Sheik,1996,Alternative
+Friends In Low Places,Garth Brooks,1990,Country / Country Rock
+Sweet Emotion,Aerosmith,1975,Classic Rock
+Closing Time,Semisonic,1998,Alternative
+Ramble On,Led Zeppelin,1969,Classic Rock
+Dear Mr. Fantasy,Traffic,1967,Classic Rock
+Sacrifice and Blues,John Gonzales / NJQ Original,2015,Blues / Blues Rock
+Saturday Night's Alright For Fighting,Elton John,1973,Classic Rock
+The Race Is On,George Jones,1964,Country / Country Rock
+I Love This Bar,Toby Keith,2003,Country / Country Rock
